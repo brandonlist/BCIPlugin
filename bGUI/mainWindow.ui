@@ -1,0 +1,608 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>820</width>
+    <height>887</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>BCIplugin</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <layout class="QHBoxLayout" name="layoutConnection">
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_3">
+        <property name="sizeConstraint">
+         <enum>QLayout::SetDefaultConstraint</enum>
+        </property>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_2">
+          <item>
+           <widget class="QLabel" name="labelStreamClient">
+            <property name="text">
+             <string>Stream Clients</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_3">
+          <item>
+           <widget class="QListWidget" name="listStreamClient"/>
+          </item>
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_2">
+            <item>
+             <widget class="QPlainTextEdit" name="textStreamClient">
+              <property name="plainText">
+               <string>No Stream Client selected...</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="btnStartStreamClient">
+              <property name="text">
+               <string>Start Streaming</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="btnStopStreamClient">
+              <property name="text">
+               <string>Stop Streaming</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_11">
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_4">
+          <item>
+           <widget class="QLabel" name="labelAppClient">
+            <property name="text">
+             <string>App Clients</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_5">
+          <item>
+           <widget class="QListWidget" name="listAppClient"/>
+          </item>
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_5">
+            <item>
+             <widget class="QPlainTextEdit" name="textAppClient">
+              <property name="plainText">
+               <string>No App Client selected...</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="BtnDisconAppClient">
+              <property name="text">
+               <string>Disconnect</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="BtnMoreAppClient">
+              <property name="text">
+               <string>More...</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="layoutExp">
+      <item>
+       <widget class="QTabWidget" name="tabWidget">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="currentIndex">
+         <number>0</number>
+        </property>
+        <widget class="QWidget" name="tabClf">
+         <attribute name="title">
+          <string>pluginCore</string>
+         </attribute>
+         <layout class="QHBoxLayout" name="horizontalLayout_7">
+          <item>
+           <layout class="QVBoxLayout" name="layoutInspector">
+            <item>
+             <widget class="QLabel" name="labelDatasets">
+              <property name="text">
+               <string>Datasets</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QListWidget" name="listDatasets"/>
+            </item>
+            <item>
+             <widget class="QPushButton" name="btnUpdateCore">
+              <property name="text">
+               <string>Update Core</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="btnMoreInspector">
+              <property name="text">
+               <string>More...</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_6"/>
+          </item>
+          <item>
+           <layout class="QVBoxLayout" name="layoutAlgorithm">
+            <item>
+             <widget class="QLabel" name="labelAlgorithm">
+              <property name="text">
+               <string>Algorithms</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QListWidget" name="listAlgorithm"/>
+            </item>
+            <item>
+             <widget class="QPushButton" name="btnMoreAlgorithm">
+              <property name="text">
+               <string>More...</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="btnRunModule">
+              <property name="text">
+               <string>Run</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="labelModule">
+              <property name="text">
+               <string>Modules</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QListWidget" name="listModule"/>
+            </item>
+            <item>
+             <widget class="QPushButton" name="btnOutputModule">
+              <property name="text">
+               <string>Output</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_9">
+            <item>
+             <widget class="QLabel" name="labelInspector">
+              <property name="text">
+               <string>Inspectors</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QListWidget" name="listInspector"/>
+            </item>
+            <item>
+             <widget class="QPushButton" name="btnRunInspector">
+              <property name="text">
+               <string>Inspect</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="labelProcessor">
+              <property name="text">
+               <string>Processor</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QListWidget" name="listProcessor"/>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="tab">
+         <attribute name="title">
+          <string>MetaBCICore</string>
+         </attribute>
+        </widget>
+       </widget>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout"/>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_8">
+      <item>
+       <layout class="QVBoxLayout" name="layoutParadigm_2">
+        <item>
+         <widget class="QLabel" name="labelParadigm">
+          <property name="text">
+           <string>Paradigms</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QListWidget" name="listParadigm"/>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btnConfigParadigm">
+          <property name="text">
+           <string>Config</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btnRunParadigm">
+          <property name="text">
+           <string>Run</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="layoutValue">
+        <item>
+         <widget class="QLabel" name="labelValue">
+          <property name="text">
+           <string>Values</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QListWidget" name="listValue"/>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="layoutResult">
+        <item>
+         <widget class="QLabel" name="labelResult">
+          <property name="text">
+           <string>Results</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QListWidget" name="listResult"/>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btnLoadResult">
+          <property name="text">
+           <string>Load</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btnMoreResult">
+          <property name="text">
+           <string>More..</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="layoutLog">
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_7">
+        <item>
+         <widget class="QLabel" name="labelLog">
+          <property name="text">
+           <string>Log</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPlainTextEdit" name="plainTextLog"/>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>820</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>文件</string>
+    </property>
+    <widget class="QMenu" name="menuNew">
+     <property name="title">
+      <string>新建</string>
+     </property>
+     <widget class="QMenu" name="menuNewCon">
+      <property name="title">
+       <string>连接</string>
+      </property>
+      <widget class="QMenu" name="menuNewConStreamClient">
+       <property name="title">
+        <string>StreamClient</string>
+       </property>
+       <addaction name="actionNCSCFrom_brainflow"/>
+       <addaction name="actionNCSCFrom_Curry8"/>
+       <addaction name="actionNCSCFrom_LSL"/>
+      </widget>
+      <widget class="QMenu" name="menuNewConAppClient">
+       <property name="title">
+        <string>AppClient</string>
+       </property>
+       <addaction name="actionFrom_Unity"/>
+       <addaction name="actionFrom_Unreal"/>
+      </widget>
+      <addaction name="menuNewConStreamClient"/>
+      <addaction name="menuNewConAppClient"/>
+     </widget>
+     <widget class="QMenu" name="menuNewExp">
+      <property name="title">
+       <string>实验</string>
+      </property>
+      <widget class="QMenu" name="menuFrom_Built_in">
+       <property name="title">
+        <string>From plugin</string>
+       </property>
+       <addaction name="actionMI_Calibrate"/>
+       <addaction name="actionMI_Online"/>
+       <addaction name="actionMITrain"/>
+      </widget>
+      <addaction name="menuFrom_Built_in"/>
+      <addaction name="actionNewExpFrom_MetaBCI"/>
+     </widget>
+     <widget class="QMenu" name="menu">
+      <property name="title">
+       <string>数据集</string>
+      </property>
+      <widget class="QMenu" name="menuTo_pluginCore">
+       <property name="title">
+        <string>To pluginCore</string>
+       </property>
+       <addaction name="actionFrom_MOABB_2"/>
+       <addaction name="actionFrom_BCIC_2"/>
+       <addaction name="actionFrom_mne"/>
+       <addaction name="actionFrom_BCILab_2"/>
+      </widget>
+      <addaction name="menuTo_pluginCore"/>
+     </widget>
+     <addaction name="menuNewCon"/>
+     <addaction name="menuNewExp"/>
+     <addaction name="menu"/>
+    </widget>
+    <widget class="QMenu" name="menuSave">
+     <property name="title">
+      <string>保存</string>
+     </property>
+     <addaction name="actionSaveExp"/>
+     <addaction name="actionSaveLog"/>
+    </widget>
+    <addaction name="menuNew"/>
+    <addaction name="menuSave"/>
+   </widget>
+   <widget class="QMenu" name="menuTool">
+    <property name="title">
+     <string>工具</string>
+    </property>
+    <widget class="QMenu" name="menuextend">
+     <property name="title">
+      <string>extend</string>
+     </property>
+     <addaction name="actionbraindecode"/>
+     <addaction name="actionMetaBCI"/>
+     <addaction name="actionmne"/>
+     <addaction name="actionBCILab"/>
+    </widget>
+    <addaction name="actionStream_Visualizer"/>
+    <addaction name="actionBuilt_in_Classifier"/>
+    <addaction name="menuextend"/>
+   </widget>
+   <widget class="QMenu" name="menuSetting">
+    <property name="title">
+     <string>设置</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>帮助</string>
+    </property>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuTool"/>
+   <addaction name="menuSetting"/>
+   <addaction name="menuHelp"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionNCSCFrom_brainflow">
+   <property name="text">
+    <string>From brainflow</string>
+   </property>
+  </action>
+  <action name="actionNCSCFrom_Curry8">
+   <property name="text">
+    <string>From Curry8</string>
+   </property>
+  </action>
+  <action name="actionNCSCFrom_LSL">
+   <property name="text">
+    <string>From LSL</string>
+   </property>
+  </action>
+  <action name="actionFrom_Unity">
+   <property name="text">
+    <string>From Unity</string>
+   </property>
+  </action>
+  <action name="actionFrom_Unreal">
+   <property name="text">
+    <string>From Unreal</string>
+   </property>
+  </action>
+  <action name="actionNewExpFrom_MetaBCI">
+   <property name="text">
+    <string>From MetaBCI</string>
+   </property>
+  </action>
+  <action name="actionLoadExpFrom_Built_in">
+   <property name="text">
+    <string>From Built-in</string>
+   </property>
+  </action>
+  <action name="actionLoadExp_From_MetaBCI">
+   <property name="text">
+    <string>From MetaBCI</string>
+   </property>
+  </action>
+  <action name="actionLoadExp_From_File">
+   <property name="text">
+    <string>From File</string>
+   </property>
+  </action>
+  <action name="actionSaveExp">
+   <property name="text">
+    <string>实验</string>
+   </property>
+  </action>
+  <action name="actionSaveLog">
+   <property name="text">
+    <string>记录</string>
+   </property>
+  </action>
+  <action name="actionStream_Visualizer">
+   <property name="text">
+    <string>Stream Visualizer</string>
+   </property>
+  </action>
+  <action name="actionBuilt_in_Classifier">
+   <property name="text">
+    <string>Built-in Classifier</string>
+   </property>
+  </action>
+  <action name="actionbraindecode">
+   <property name="text">
+    <string>braindecode</string>
+   </property>
+  </action>
+  <action name="actionMetaBCI">
+   <property name="text">
+    <string>MetaBCI</string>
+   </property>
+  </action>
+  <action name="actionmne">
+   <property name="text">
+    <string>mne</string>
+   </property>
+  </action>
+  <action name="actionBCILab">
+   <property name="text">
+    <string>BCILab</string>
+   </property>
+  </action>
+  <action name="actionMI_Calibrate">
+   <property name="text">
+    <string>MICalibrate</string>
+   </property>
+  </action>
+  <action name="actionMI_Online">
+   <property name="text">
+    <string>SynMI</string>
+   </property>
+  </action>
+  <action name="actionMITrain">
+   <property name="text">
+    <string>MITrain</string>
+   </property>
+  </action>
+  <action name="actionFrom_MOABB">
+   <property name="text">
+    <string>From MOABB</string>
+   </property>
+  </action>
+  <action name="actionFrom_BCIC">
+   <property name="text">
+    <string>From BCIC</string>
+   </property>
+  </action>
+  <action name="actionFrom_mne_Raw">
+   <property name="text">
+    <string>From mne</string>
+   </property>
+  </action>
+  <action name="actionFrom_BCILab">
+   <property name="text">
+    <string>From BCILab</string>
+   </property>
+  </action>
+  <action name="actionFrom_MOABB_2">
+   <property name="text">
+    <string>From MOABB</string>
+   </property>
+  </action>
+  <action name="actionFrom_BCIC_2">
+   <property name="text">
+    <string>From BCIC</string>
+   </property>
+  </action>
+  <action name="actionFrom_mne">
+   <property name="text">
+    <string>From mne</string>
+   </property>
+  </action>
+  <action name="actionFrom_BCILab_2">
+   <property name="text">
+    <string>From BCILab</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
