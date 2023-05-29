@@ -1,5 +1,5 @@
 # BCIPlugin
 
-This Project is a easy way to build up BCI applications using python
+This Project is a python toolbox to build up BCI applications using either consumer-grade EEG headset or wet-electrodes.
 
-added by ysy
+![](title.png)
